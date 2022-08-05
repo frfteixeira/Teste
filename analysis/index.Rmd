@@ -8,4 +8,9 @@ editor_options:
   chunk_output_type: console
 ---
 
-Welcome to my research website.
+Welcome to my research website. Teste do Github integrado ao RStudio.
+
+```{r}
+
+```
+

@@ -9,11 +9,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="filiperfteixeira" />
 
-<meta name="date" content="2022-08-05" />
 
-<title>PCA</title>
+<title>Home</title>
 
 <script src="site_libs/header-attrs-2.12/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -31,9 +29,6 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -237,69 +232,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-
 
 </head>
 
@@ -307,16 +239,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -354,9 +276,7 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">PCA</h1>
-<h4 class="author">filiperfteixeira</h4>
-<h4 class="date">2022-08-05</h4>
+<h1 class="title toc-ignore">Home</h1>
 
 </div>
 
@@ -364,7 +284,7 @@ div.tocify {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-ok text-success"
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -375,8 +295,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
-</a>
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -389,9 +309,9 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 0
+aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>Teste/</code> <span
@@ -414,18 +334,21 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
-</a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate"
+<div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git
-repository, you know the exact version of the code that produced these
-results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
 </div>
 </div>
 </div>
@@ -572,8 +495,8 @@ have uncommitted changes.
 
 <p>
 These are the previous versions of the repository in which changes were
-made to the R Markdown (<code>analysis/PCA.Rmd</code>) and HTML
-(<code>docs/PCA.html</code>) files. If you’ve configured a remote Git
+made to the R Markdown (<code>analysis/index.Rmd</code>) and HTML
+(<code>docs/index.html</code>) files. If you’ve configured a remote Git
 repository (see <code>?wflow_git_remote</code>), click on the hyperlinks
 in the table below to view the files as they were in that past version.
 </p>
@@ -601,44 +524,10 @@ Message
 <tbody>
 <tr>
 <td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/frfteixeira/Teste/61b07f63cc0d73b2948e87c5d870a2460057faee/docs/PCA.html" target="_blank">61b07f6</a>
-</td>
-<td>
-filiperfteixeira
-</td>
-<td>
-2022-08-05
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/frfteixeira/Teste/2f8cb36e4c6c289917407df6d4943892d07caa3c/docs/PCA.html" target="_blank">2f8cb36</a>
-</td>
-<td>
-filiperfteixeira
-</td>
-<td>
-2022-08-05
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
 Rmd
 </td>
 <td>
-<a href="https://github.com/frfteixeira/Teste/blob/432de4a971a6a92cc2d0d412bb776089030b9af0/analysis/PCA.Rmd" target="_blank">432de4a</a>
+<a href="https://github.com/frfteixeira/Teste/blob/c63fd7f0a8dc0f49af9530208d0a84ec36ec0a11/analysis/index.Rmd" target="_blank">c63fd7f</a>
 </td>
 <td>
 filiperfteixeira
@@ -647,7 +536,7 @@ filiperfteixeira
 2022-08-05
 </td>
 <td>
-Teste1
+Start workflowr project.
 </td>
 </tr>
 </tbody>
@@ -657,35 +546,8 @@ Teste1
 </div>
 </div>
 </div>
-<div id="análise-de-componentes-principais-iris" class="section level1">
-<h1>Análise de Componentes Principais (Iris)</h1>
-<div id="coletando-os-dados" class="section level2">
-<h2>Coletando os dados</h2>
-<pre class="r"><code>data = data(&#39;iris&#39;)</code></pre>
-</div>
-<div id="iniciando-a-análise" class="section level2">
-<h2>Iniciando a análise</h2>
-<pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>Warning: package &#39;tidyverse&#39; was built under R version 4.1.2</code></pre>
-<pre><code>-- Attaching packages --------------------------------------- tidyverse 1.3.1 --</code></pre>
-<pre><code>v ggplot2 3.3.5     v purrr   0.3.4
-v tibble  3.1.4     v dplyr   1.0.7
-v tidyr   1.1.4     v stringr 1.4.0
-v readr   2.1.2     v forcats 0.5.1</code></pre>
-<pre><code>Warning: package &#39;ggplot2&#39; was built under R version 4.1.1</code></pre>
-<pre><code>Warning: package &#39;tibble&#39; was built under R version 4.1.1</code></pre>
-<pre><code>Warning: package &#39;tidyr&#39; was built under R version 4.1.1</code></pre>
-<pre><code>Warning: package &#39;readr&#39; was built under R version 4.1.2</code></pre>
-<pre><code>Warning: package &#39;purrr&#39; was built under R version 4.1.1</code></pre>
-<pre><code>Warning: package &#39;dplyr&#39; was built under R version 4.1.1</code></pre>
-<pre><code>Warning: package &#39;stringr&#39; was built under R version 4.1.2</code></pre>
-<pre><code>Warning: package &#39;forcats&#39; was built under R version 4.1.2</code></pre>
-<pre><code>-- Conflicts ------------------------------------------ tidyverse_conflicts() --
-x dplyr::filter() masks stats::filter()
-x dplyr::lag()    masks stats::lag()</code></pre>
-<pre class="r"><code>iris |&gt; 
-  ggplot(aes(x = Sepal.Length, y = Sepal.Width)) + geom_point()</code></pre>
-<p><img src="figure/PCA.Rmd/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Welcome to my research website. Teste do Github integrado ao
+RStudio.</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -709,31 +571,17 @@ locale:
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
-other attached packages:
-[1] forcats_0.5.1   stringr_1.4.0   dplyr_1.0.7     purrr_0.3.4    
-[5] readr_2.1.2     tidyr_1.1.4     tibble_3.1.4    ggplot2_3.3.5  
-[9] tidyverse_1.3.1
-
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.7       lubridate_1.7.10 assertthat_0.2.1 rprojroot_2.0.3 
- [5] digest_0.6.28    utf8_1.2.2       R6_2.5.1         cellranger_1.1.0
- [9] backports_1.4.1  reprex_2.0.1     evaluate_0.15    highr_0.9       
-[13] httr_1.4.2       pillar_1.6.3     rlang_1.0.3      readxl_1.3.1    
-[17] rstudioapi_0.13  whisker_0.4      jquerylib_0.1.4  rmarkdown_2.12  
-[21] labeling_0.4.2   munsell_0.5.0    broom_0.7.12     compiler_4.1.0  
-[25] httpuv_1.6.5     modelr_0.1.8     xfun_0.30        pkgconfig_2.0.3 
-[29] htmltools_0.5.2  tidyselect_1.1.1 workflowr_1.7.0  fansi_0.5.0     
-[33] crayon_1.4.1     tzdb_0.2.0       dbplyr_2.1.1     withr_2.5.0     
-[37] later_1.3.0      grid_4.1.0       jsonlite_1.7.2   gtable_0.3.0    
-[41] lifecycle_1.0.1  DBI_1.1.2        git2r_0.30.1     magrittr_2.0.1  
-[45] scales_1.1.1     cli_3.3.0        stringi_1.7.6    farver_2.1.0    
-[49] fs_1.5.2         promises_1.2.0.1 xml2_1.3.3       bslib_0.3.1     
-[53] ellipsis_0.3.2   generics_0.1.0   vctrs_0.3.8      tools_4.1.0     
-[57] glue_1.6.2       hms_1.1.1        fastmap_1.1.0    yaml_2.3.5      
-[61] colorspace_2.0-2 rvest_1.0.2      knitr_1.37       haven_2.4.3     
-[65] sass_0.4.0      </code></pre>
-</div>
-</div>
+ [1] Rcpp_1.0.7       rstudioapi_0.13  whisker_0.4      knitr_1.37      
+ [5] magrittr_2.0.1   workflowr_1.7.0  R6_2.5.1         rlang_1.0.3     
+ [9] fastmap_1.1.0    fansi_0.5.0      stringr_1.4.0    tools_4.1.0     
+[13] xfun_0.30        utf8_1.2.2       cli_3.3.0        git2r_0.30.1    
+[17] jquerylib_0.1.4  htmltools_0.5.2  ellipsis_0.3.2   rprojroot_2.0.3 
+[21] yaml_2.3.5       digest_0.6.28    tibble_3.1.4     lifecycle_1.0.1 
+[25] crayon_1.4.1     later_1.3.0      sass_0.4.0       vctrs_0.3.8     
+[29] promises_1.2.0.1 fs_1.5.2         glue_1.6.2       evaluate_0.15   
+[33] rmarkdown_2.12   stringi_1.7.6    bslib_0.3.1      compiler_4.1.0  
+[37] pillar_1.6.3     jsonlite_1.7.2   httpuv_1.6.5     pkgconfig_2.0.3 </code></pre>
 </div>
 
 
@@ -752,8 +600,6 @@ footer is added to webpages before the MathJax javascript. -->
 
 
 
-</div>
-</div>
 
 </div>
 
@@ -786,35 +632,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
-    $('.unlisted.unnumbered').addClass('toc-ignore')
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
